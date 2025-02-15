@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import appwriteService from "../appwrite/config";
-import { Container, PostCard } from '../components';
+import { Container, PostCard, Logo } from '../components';
 import { useSelector } from 'react-redux';
+import logo from '../components/logo.png';
 
 
 function Home() {
@@ -24,15 +25,19 @@ function Home() {
     if (posts.length === 0) {
         return (
             <div className="w-full py-8 mt-4 text-center">
-                <Container>
+                
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
-                            <h1 className="text-2xl font-bold hover:text-gray-500">
+                            <div className="mb-2 flex justify-center">
+                                      <span className="inline-block w-full max-w-[300px]">
+                                      <img src={logo} alt="BlogSphere Logo" style={{ width: '300px' }} />
+                                      </span>
+                                    </div>
+                            <h1 className="py-7 text-2xl font-bold">
                                 Login to read posts
                             </h1>
                         </div>
                     </div>
-                </Container>
             </div>
         )
     }

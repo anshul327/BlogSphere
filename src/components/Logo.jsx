@@ -1,8 +1,11 @@
 import React from 'react'
+import logo from './logo.png'
 
-function Logo({width = '100px'}) {
+function Logo({ width = '150px' }) {
   return (
-    <div>Logo</div>
+    <div>
+      <img src={logo} alt="BlogSphere Logo" style={{ width }} />
+    </div>
   )
 }
 
